@@ -4,6 +4,8 @@ import utils, model
 import time, datetime
 import numpy as np
 import tensorflow as tf
+import ctypes
+ctypes.CDLL("libgomp.so.1", mode=ctypes.RTLD_GLOBAL)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--time_slot', type = int, default = 5,
